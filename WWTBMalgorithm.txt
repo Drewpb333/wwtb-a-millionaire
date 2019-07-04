@@ -1,0 +1,36 @@
+Who Wants to Be a Millionaire Algorithm/Pseudocode
+
+1.  Create a dictionary filled with five dictionaries at the top of the program
+        *Each dictionary will have four properties: Question, Answer Choices, Correct Answer, and Point Value
+        *The dictionaries in the list will be ordered from easiest to hardest question
+2.  Create a variable called total_points and a list called valid_answers
+3.  Create a main function
+        *Within the main function, the remaining functions in the program will be called
+4.  Create a function called start_game
+        *With start_game, the program will print a greeting and reset total_points to zero
+5.  Within the main function, create a for loop that iterates through the questions list
+        *each iteration will execute the question_prompt for every question
+6.  Create a function called question_prompt
+        *question_prompt will display the Question and Answer Choices properties of the current list
+        *the user will be prompted to select a letter in correspondence with their selected answer
+        *input validation will be run to make sure the input is a string and is either 'A','B','C', or 'D'
+        *If an invalid input is entered, the terminal will display an error and and ask for a valid input
+        *This will continue until a valid input is entered
+7.  Create a function called check_answer
+        *if check_answer is correct, use the += operator to add the point_value property to total_points
+        *if check_answer is correct, print a "Correct" message along with the new total_points amount
+        *if check_answer is incorrect, print an "Incorrect" message to the screen along with total_points
+8.  Create a function called check_highest_score
+        *this will open the 'highestscore'.txt file
+        *a list will be created from the file with a delimiter of " "
+        *the score will be obtained from the highest_score file, casted to an integer
+        *the obtained score will be assigned to a variable current_highest_score
+        *if total_points is less than the current_highest_score, then nothing will happen
+        *if total_points is greater than the current_highest_score, then prompt the user for their first name
+        *this will be written to the highest_score file
+9.  Create a function play_again
+        *this will prompt the user if they would like to play again
+        *use input validation for user response
+        *if valid is input, print an error message and continue to prompt the user for a response
+        *if response is 'Y', execute the main function
+        *if reponse is 'N', exit the program
